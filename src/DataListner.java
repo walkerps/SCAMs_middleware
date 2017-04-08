@@ -1,5 +1,6 @@
 import java.io.*;
 import java.net.*;
+import java.util.*;
 
 
 public class DataListner {
@@ -15,13 +16,13 @@ public class DataListner {
 				nodeThread.start();
 			}			
 		}catch(Exception e){System.out.println(e);}
-		
 	}
 }
 
 class NodeServiceThread extends Thread{
 	Socket nodeSocket;
 	boolean running = true;
+	Queue<String> sensorDataQueue = new LinkedList<>();
 	String nodeData = null;
 	
 	NodeServiceThread(Socket s){
@@ -36,7 +37,10 @@ class NodeServiceThread extends Thread{
 			while(running){
 				while(br.readLine() != null){
 				String nodeData = br.readLine();
-				System.out.println(nodeData);
+				sensorDataQueue.add(nodeData);
+				/* Create a object of queue data and forward the data to diaggregration stage*/
+				SensorNode sen1 = new SensorNode();
+				
 				}
 				if(nodeData.equalsIgnoreCase(null)){
 					running  = false;

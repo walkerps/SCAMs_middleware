@@ -6,9 +6,11 @@ public class SensorNode {
 	private int medium;
 	private double batteryLevel;
 	private String incomingPort;
-	private double sensorData;
+	private String sensorData;
+	private String timeStamp;
+	private String status;
 	
-	public SensorNode(String nodeId,int mediumValue,double linkstrength,double coordinates,int medium,double batteryLevel,String incomingPort,double sensorData){
+	public SensorNode(String nodeId,int mediumValue,double linkstrength,double coordinates,int medium,double batteryLevel,String incomingPort,String sensorData,String timeStamp,String status){
 		this.nodeId = nodeId;
 		this.mediumValue = mediumValue;
 		this.linkStrength = linkstrength;
@@ -17,8 +19,28 @@ public class SensorNode {
 		this.batteryLevel = batteryLevel;
 		this.incomingPort = incomingPort;
 		this.sensorData = sensorData;
+		this.timeStamp = timeStamp;
+		this.status = status;
 		
 	} 
+	public SensorNode(){
+		this.nodeId = null;
+		this.mediumValue = 0;
+		this.linkStrength = 0;
+		this.coOrdinates = 0;
+		this.batteryLevel = 0;
+		this.medium = 0;
+		this.incomingPort = null;
+		this.sensorData = null;
+		this.timeStamp = null;
+		this.status = null;
+		}
+	public String getStatus(){
+		return this.status;
+	}
+	public String getTimeStamp(){
+		return this.timeStamp;
+	}
 	public String getNodeId(){
 		
 		return this.nodeId;
@@ -52,7 +74,7 @@ public class SensorNode {
 		return  this.incomingPort;
 	}
 	
-	public double getSensorData(){
+	public String getSensorData(){
 		
 		return this.sensorData;
 	}
@@ -94,8 +116,14 @@ public class SensorNode {
 		this.incomingPort = incomingPort;
 	}
 	
-	public void setSensorData(double data){
+	public void setSensorData(String data){
 		
 		this.sensorData = data;
+	}
+	public void setTimeStamp(String timeStamp){
+		this.timeStamp = timeStamp;
+	}
+	public void setStatus(String status){
+		this.status = status;
 	}
 }
