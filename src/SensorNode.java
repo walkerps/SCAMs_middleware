@@ -6,23 +6,11 @@ public class SensorNode {
 	private int medium;
 	private double batteryLevel;
 	private String incomingPort;
-<<<<<<< HEAD
-<<<<<<< HEAD
 	private String sensorData;
 	private String timeStamp;
 	private String status;
 	
 	public SensorNode(String nodeId,int mediumValue,double linkstrength,double coordinates,int medium,double batteryLevel,String incomingPort,String sensorData,String timeStamp,String status){
-=======
-	private SensorData sensorData;
-	
-	public SensorNode(String nodeId,int mediumValue,double linkstrength,double coordinates,int medium,double batteryLevel,String incomingPort,SensorData sensorData){
->>>>>>> 1487f0bc5a69a8ffff63588a050fd27bba22d0d8
-=======
-	private double sensorData;
-	
-	public SensorNode(String nodeId,int mediumValue,double linkstrength,double coordinates,int medium,double batteryLevel,String incomingPort,double sensorData){
->>>>>>> 8edb46f48204553265ddaf372af41d57a2284a03
 		this.nodeId = nodeId;
 		this.mediumValue = mediumValue;
 		this.linkStrength = linkstrength;
@@ -31,11 +19,9 @@ public class SensorNode {
 		this.batteryLevel = batteryLevel;
 		this.incomingPort = incomingPort;
 		this.sensorData = sensorData;
-<<<<<<< HEAD
 		this.timeStamp = timeStamp;
 		this.status = status;
 		
-<<<<<<< HEAD
 	} 
 	public SensorNode(){
 		this.nodeId = null;
@@ -54,13 +40,7 @@ public class SensorNode {
 	}
 	public String getTimeStamp(){
 		return this.timeStamp;
-=======
->>>>>>> 1487f0bc5a69a8ffff63588a050fd27bba22d0d8
 	}
-=======
-		
-	} 
->>>>>>> 8edb46f48204553265ddaf372af41d57a2284a03
 	public String getNodeId(){
 		
 		return this.nodeId;
@@ -94,15 +74,7 @@ public class SensorNode {
 		return  this.incomingPort;
 	}
 	
-<<<<<<< HEAD
-<<<<<<< HEAD
 	public String getSensorData(){
-=======
-	public SensorData getSensorData(){
->>>>>>> 1487f0bc5a69a8ffff63588a050fd27bba22d0d8
-=======
-	public double getSensorData(){
->>>>>>> 8edb46f48204553265ddaf372af41d57a2284a03
 		
 		return this.sensorData;
 	}
@@ -144,15 +116,7 @@ public class SensorNode {
 		this.incomingPort = incomingPort;
 	}
 	
-<<<<<<< HEAD
-<<<<<<< HEAD
 	public void setSensorData(String data){
-=======
-	public void setSensorData(SensorData data){
->>>>>>> 1487f0bc5a69a8ffff63588a050fd27bba22d0d8
-=======
-	public void setSensorData(double data){
->>>>>>> 8edb46f48204553265ddaf372af41d57a2284a03
 		
 		this.sensorData = data;
 	}
