@@ -6,9 +6,9 @@ public class SensorNode {
 	private int medium;
 	private double batteryLevel;
 	private String incomingPort;
-	private double sensorData;
+	private SensorData sensorData;
 	
-	public SensorNode(String nodeId,int mediumValue,double linkstrength,double coordinates,int medium,double batteryLevel,String incomingPort,double sensorData){
+	public SensorNode(String nodeId,int mediumValue,double linkstrength,double coordinates,int medium,double batteryLevel,String incomingPort,SensorData sensorData){
 		this.nodeId = nodeId;
 		this.mediumValue = mediumValue;
 		this.linkStrength = linkstrength;
@@ -18,7 +18,7 @@ public class SensorNode {
 		this.incomingPort = incomingPort;
 		this.sensorData = sensorData;
 		
-	} 
+	}
 	public String getNodeId(){
 		
 		return this.nodeId;
@@ -52,7 +52,7 @@ public class SensorNode {
 		return  this.incomingPort;
 	}
 	
-	public double getSensorData(){
+	public SensorData getSensorData(){
 		
 		return this.sensorData;
 	}
@@ -94,7 +94,7 @@ public class SensorNode {
 		this.incomingPort = incomingPort;
 	}
 	
-	public void setSensorData(double data){
+	public void setSensorData(SensorData data){
 		
 		this.sensorData = data;
 	}
