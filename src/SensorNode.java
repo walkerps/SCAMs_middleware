@@ -2,23 +2,23 @@ public class SensorNode {
 	private String nodeId;
 	private int mediumValue;
 	private double linkStrength;
-	private double coOrdinates;
+	private String location;
 	private int medium;
 	private double batteryLevel;
 	private String incomingPort;
-	private String sensorData;
+	private SensorData sensorData;
 	private String timeStamp;
 	private String status;
 	
-	public SensorNode(String nodeId,int mediumValue,double linkstrength,double coordinates,int medium,double batteryLevel,String incomingPort,String sensorData,String timeStamp,String status){
+	public SensorNode(String nodeId,int mediumValue,double linkstrength,String location,int medium,double batteryLevel,String incomingPort,SensorData sensorData,String timeStamp,String status){
 		this.nodeId = nodeId;
 		this.mediumValue = mediumValue;
 		this.linkStrength = linkstrength;
-		this.coOrdinates = coordinates;
+		this.location = location;
 		this.medium = medium;
 		this.batteryLevel = batteryLevel;
 		this.incomingPort = incomingPort;
-		this.sensorData = sensorData;
+		this.sensorData = null;
 		this.timeStamp = timeStamp;
 		this.status = status;
 		
@@ -27,7 +27,7 @@ public class SensorNode {
 		this.nodeId = null;
 		this.mediumValue = 0;
 		this.linkStrength = 0;
-		this.coOrdinates = 0;
+		this.location = null;
 		this.batteryLevel = 0;
 		this.medium = 0;
 		this.incomingPort = null;
@@ -54,9 +54,9 @@ public class SensorNode {
 		return this.linkStrength;
 	}
 	
-	public double getCoordinates(){
+	public String getLocation(){
 		
-		return this.coOrdinates;
+		return this.location;
 	}
 	
 	public int getMedium(){
@@ -74,7 +74,7 @@ public class SensorNode {
 		return  this.incomingPort;
 	}
 	
-	public String getSensorData(){
+	public SensorData getSensorData(){
 		
 		return this.sensorData;
 	}
@@ -94,9 +94,9 @@ public class SensorNode {
 		this.linkStrength = linkStrength;
 	}
 	
-	public void setCoordinates(int coordinates){
+	public void setLocation(String location){
 		
-		this.coOrdinates = coordinates;
+		this.location = location;
 	}
 	
 	public void setMedium(int medium){
@@ -116,9 +116,9 @@ public class SensorNode {
 		this.incomingPort = incomingPort;
 	}
 	
-	public void setSensorData(String data){
+	public void setSensorData(SensorData sensorData){
 		
-		this.sensorData = data;
+		this.sensorData = sensorData;
 	}
 	public void setTimeStamp(String timeStamp){
 		this.timeStamp = timeStamp;

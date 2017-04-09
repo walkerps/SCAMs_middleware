@@ -39,7 +39,10 @@ class NodeServiceThread extends Thread{
 				String nodeData = br.readLine();
 				sensorDataQueue.add(nodeData);
 				/* Create a object of queue data and forward the data to diaggregration stage*/
-				SensorNode sen1 = new SensorNode();
+				SensorNode sensorNode_ = new SensorNode();
+				String listData[] = nodeData.split("\\s*.\\s");
+				sensorNode_.setNodeId(listData[0]);
+				
 				
 				}
 				if(nodeData.equalsIgnoreCase(null)){
