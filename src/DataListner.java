@@ -8,7 +8,7 @@ public class DataListner {
 	public static void main(String args[])throws Exception{
 		
 		try{
-			ServerSocket ss = new ServerSocket(8093);
+			ServerSocket ss = new ServerSocket(8094);
 			ss.setReuseAddress(true);
 			while(true)
 			{
