@@ -75,9 +75,6 @@ class NodeServiceThread extends Thread{
 					sensorNode_.setSensorData(sensorData_);
 					sensorNode_.setTimeStamp(listData[9]);
 					sensorNode_.setStatus(listData[10]);
-					System.out.println(sensorNode_.getNodeId());
-					System.out.println(sensorNode_.getStatus());
-					System.out.println(sensorNode_.getSensorData().getData());
 				}
 			}
 		}catch(Exception e){e.printStackTrace();
